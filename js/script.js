@@ -10,7 +10,7 @@
      CONFIG — change your WhatsApp number here (ONE place).
      International format, digits only, no "+" or spaces.
      ------------------------------------------------------- */
-  var WHATSAPP_NUMBER = "923714653855"; // <-- REPLACE WITH YOUR NUMBER
+  var WHATSAPP_NUMBER = "971567861057"; // <-- REPLACE WITH YOUR NUMBER
   var WHATSAPP_MSG = "Hi T&P, I'd like to discuss an interior fit-out project.";
 
   /* -------------------------------------------------------
