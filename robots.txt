@@ -1,0 +1,6 @@
+# robots.txt — allows all search engines to crawl the whole site
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap (update the domain to yours)
+Sitemap: https://www.tpfitout.com/sitemap.xml

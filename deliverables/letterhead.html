@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T&amp;P — Letterhead (print-ready)</title>
+<style>
+  :root{
+    --navy:#0a1622; --navy2:#16273c; --gold:#c0a062; --cream:#faf8f3; --text:#2b3340; --soft:#5b6470;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{ height:100%; }
+  body{
+    font-family:"Inter","Helvetica Neue",Arial,s-serif;
+    background:#e9eaee; color:var(--text);
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    padding:30px 16px;
+  }
+  .note{
+    text-align:center; color:var(--soft); font-size:13px; margin-bottom:24px; line-height:1.6; max-width:680px; margin-inline:auto;
+  }
+  .note b{color:var(--navy);}
+
+  /* A4 page */
+  .page{
+    width:210mm; min-height:297mm; background:#fff; margin:0 auto;
+    box-shadow:0 16px 40px rgba(10,22,34,.20);
+    position:relative; padding:0; display:flex; flex-direction:column;
+  }
+
+  /* HEADER */
+  .lh-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14mm 18mm 8mm; gap:14mm;
+  }
+  .lh-head .logo-wrap{
+    background:var(--cream); border-radius:8px; padding:3mm 5mm; flex:none;
+  }
+  .lh-head .logo-wrap img{ height:18mm; width:auto; display:block; }
+  .lh-head .brand{ line-height:1.2; }
+  .lh-head .brand strong{
+    font-size:13pt; letter-spacing:.14em; color:var(--navy);
+  }
+  .lh-head .brand span{
+    display:block; font-size:6.6pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm;
+  }
+  .lh-head .contact{
+    text-align:right; font-size:7pt; color:var(--soft); line-height:1.85;
+  }
+  .lh-head .contact b{ color:var(--navy); font-weight:600; }
+  .gold-rule{ height:2px; background:linear-gradient(90deg,var(--gold),rgba(192,160,98,0)); margin:0 18mm; }
+
+  /* BODY */
+  .lh-body{
+    flex:1; padding:12mm 18mm 0;
+  }
+  .lh-body .date{ font-size:9pt; color:var(--soft); margin-bottom:6mm; }
+  .lh-body h2{ font-size:11pt; color:var(--navy); margin-bottom:5mm; font-family:"Inter",sans-serif; font-weight:700; }
+  .lh-body p{ font-size:9.5pt; line-height:1.75; color:var(--text); margin-bottom:4mm; }
+  .signoff{ margin-top:14mm; }
+  .signoff p{ margin-bottom:1mm; }
+  .signoff .sig{ font-family:"Playfair Display",Georgia,serif; font-style:italic; font-size:13pt; color:var(--navy); margin-top:2mm; }
+  .signoff .who{ font-size:8pt; color:var(--soft); }
+  .signoff .who b{ color:var(--navy); }
+
+  /* FOOTER */
+  .lh-foot{
+    border-top:1px solid #e6e1d8; background:var(--navy); color:#aeb9c6;
+    padding:7mm 18mm; display:flex; justify-content:space-between; gap:10mm; flex-wrap:wrap;
+  }
+  .lh-foot .col{ font-size:6.6pt; line-height:1.7; }
+  .lh-foot .col strong{ color:#fff; display:block; letter-spacing:.14em; text-transform:uppercase; margin-bottom:1.5mm; }
+  .lh-foot .col a{ color:#aeb9c6; text-decoration:none; }
+  .lh-foot .col .wa{ color:#25d366; font-weight:700; }
+  .lh-foot .gold-bar{ height:3px; background:var(--gold); }
+
+  @media print{
+    body{ background:#fff; padding:0; }
+    .note{ display:none; }
+    .page{ box-shadow:none; width:210mm; min-height:297mm; }
+    @page{ size:A4; margin:0; }
+  }
+</style>
+</head>
+<body>
+
+  <p class="note">
+    <b>T&amp;P Letterhead</b> — print-ready <b>A4</b>. Type your letter into the body below,
+    then <b>File → Print → Save as PDF</b> (margins "None"). All details are editable in this HTML.
+  </p>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="lh-head">
+      <div style="display:flex; align-items:center; gap:6mm;">
+        <div class="logo-wrap"><img src="../images/logo.png" alt="T&amp;P logo" /></div>
+        <div class="brand">
+          <strong>T&amp;P</strong>
+          <span>Interior Fit-Out &amp; Contracting</span>
+        </div>
+      </div>
+      <div class="contact">
+        <b>+971 50 123 4567</b><br/>
+        hello@tpfitout.com<br/>
+        www.tpfitout.com<br/>
+        Business Bay, Dubai, UAE
+      </div>
+    </div>
+    <div class="gold-rule"></div>
+
+    <!-- BODY -->
+    <div class="lh-body">
+      <div class="date">24 June 2026</div>
+      <h2>Re: Interior Fit-Out Quotation</h2>
+      <p>Dear Client,</p>
+      <p>Thank you for considering T&amp;P for your interior fit-out requirements. We are pleased to submit our proposal covering all works discussed, including gypsum, joinery, painting, flooring and MEP coordination — delivered by our in-house team to the quality standard we are known for.</p>
+      <p>The attached quotation details scope, materials, timelines and pricing. We remain available for any clarification and look forward to the opportunity to deliver your project on time and to the highest standard.</p>
+
+      <div class="signoff">
+        <p>Yours sincerely,</p>
+        <div class="sig">Your Name</div>
+        <div class="who"><b>Founder &amp; Director</b> · T&amp;P Interior Fit-Out &amp; Contracting</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="gold-bar"></div>
+    <div class="lh-foot">
+      <div class="col">
+        <strong>T&amp;P Interior Fit-Out</strong>
+        Business Bay<br/>Dubai, United Arab Emirates
+      </div>
+      <div class="col">
+        <strong>Contact</strong>
+        +971 50 123 4567<br/>
+        <a href="mailto:hello@tpfitout.com">hello@tpfitout.com</a><br/>
+        www.tpfitout.com
+      </div>
+      <div class="col">
+        <strong>Quick Chat</strong>
+        WhatsApp: <span class="wa">+971 50 123 4567</span><br/>
+        Sat – Thu · 9:00 AM – 7:00 PM
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
